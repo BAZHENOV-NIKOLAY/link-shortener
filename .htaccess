@@ -1,0 +1,12 @@
+﻿RewriteEngine On
+Options +FollowSymlinks
+RewriteBase /
+
+RewriteCond   %{REQUEST_FILENAME}       !-d
+RewriteCond   %{REQUEST_FILENAME}       !-f
+
+RewriteRule   ^(.*) gener.php?%{QUERY_STRING}
+
+#RewriteRule   ^(.*) gener.php$1
+
+#%{QUERY_STRING}
